@@ -1,0 +1,94 @@
+<manifest alg="2" build="2017.0.1.363" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster" exportTarget="other" domain="skresan.com.ua" resolutions="1x" timestamp="1487238126722">
+  <folder name="css">
+    <file name="site_global.css" crc="443350757"/>
+    <file name="index.css" crc="213863161" ref="index"/>
+    <file name="iefonts_index.css" crc="4096338825" ref="index"/>
+  </folder>
+  <folder name="fonts">
+    <file name="rex bold.woff" crc="4143805311"/>
+    <file name="rex bold.eot" crc="37970633"/>
+    <file name="rex bold.svg" crc="4106406462"/>
+  </folder>
+  <folder name="assets">
+    <file name="переглянути-сертифікати.pdf" crc="274768165" seo="true" mt="1486669802000"/>
+    <file name="переглянути-інструкцію.pdf" crc="3998515820" seo="true" mt="1485804421000"/>
+    <file name="fixlightbox-css.css" crc="287692828" seo="true" mt="1480536492000"/>
+    <file name="compressed-e0d8285b78708588a8e3336203e2c8f5.pdf" crc="4294802728" seo="true" mt="1486669831000"/>
+    <file name="apple-touch-icon-72x72.png" crc="3973039147" seo="true" mt="1486741497000"/>
+    <file name="apple-touch-icon-114x114.png" crc="202763101" seo="true" mt="1486741524000"/>
+    <file name="apple-touch-icon-144x144.png" crc="4165955671" seo="true" mt="1486741542000"/>
+    <file name="apple-touch-icon.png" crc="511235851" seo="true" mt="1486741430000"/>
+    <file name="сертифікати-скресан.pdf" crc="3846899579" seo="true" mt="1487237902000"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="209076791" ref="index"/>
+    <file name="museutils.js" crc="4148063285" ref="index"/>
+    <file name="whatinput.js" crc="86476730" ref="index"/>
+    <file name="museconfig.js" crc="172512987" ref="index"/>
+    <file name="jquery.musepolyfill.bgsize.js" crc="4001026563" ref="index"/>
+    <file name="webpro.js" crc="3986320349" ref="index"/>
+    <file name="musewpslideshow.js" crc="405464237" ref="index"/>
+    <file name="jquery.museoverlay.js" crc="305414130" ref="index"/>
+    <file name="touchswipe.js" crc="221459597" ref="index"/>
+    <file name="form_check.php" crc="303648844" ref="index"/>
+    <file name="form_throttle.php" crc="236764551" ref="index"/>
+    <file name="form_process.php" crc="4272079531" ref="index"/>
+    <file name="form-u9119.php" crc="113638226" ref="index"/>
+    <file name="form-u9325.php" crc="446798595" ref="index"/>
+    <file name="jquery.watch.js" crc="437028206" ref="index"/>
+    <file name="require.js" crc="4159430777" ref="index"/>
+  </folder>
+  <folder name="images">
+    <file name="favicon.ico" crc="245390026" ref="index"/>
+    <file name="header-theme.png" crc="4248325634" ref="index"/>
+    <file name="header-logotype.png" crc="4230535719" ref="index"/>
+    <file name="fixlightbox.jpg" crc="454138893" ref="index"/>
+    <file name="block-1-logo.png" crc="4078109419" ref="index"/>
+    <file name="u5680-4.png" crc="3862279482" ref="index"/>
+    <file name="block-1-text-theme.png" crc="273359924" ref="index"/>
+    <file name="block-1-image.png" crc="3838932555" ref="index"/>
+    <file name="blank.gif" crc="4208392903" ref="index"/>
+    <file name="1.jpg" crc="4226677319" seo="true" ref="index"/>
+    <file name="2.jpg" crc="4191699861" seo="true" ref="index"/>
+    <file name="3.jpg" crc="3997472432" seo="true" ref="index"/>
+    <file name="4.jpg" crc="90879190" seo="true" ref="index"/>
+    <file name="5.jpg" crc="211330042" seo="true" ref="index"/>
+    <file name="6.jpg" crc="4257063093" seo="true" ref="index"/>
+    <file name="7.jpg" crc="4059083224" seo="true" ref="index"/>
+    <file name="8.jpg" crc="3865111656" seo="true" ref="index"/>
+    <file name="9.jpg" crc="4062304131" seo="true" ref="index"/>
+    <file name="10.jpg" crc="3896245958" seo="true" ref="index"/>
+    <file name="11.jpg" crc="466949789" seo="true" ref="index"/>
+    <file name="12.jpg" crc="352389474" seo="true" ref="index"/>
+    <file name="13.jpg" crc="253819524" seo="true" ref="index"/>
+    <file name="14.jpg" crc="344529960" seo="true" ref="index"/>
+    <file name="15.jpg" crc="339480847" seo="true" ref="index"/>
+    <file name="16.jpg" crc="3913670526" seo="true" ref="index"/>
+    <file name="loading.gif" crc="3815509949" ref="index"/>
+    <file name="block-2-theme.png" crc="185176292" ref="index"/>
+    <file name="block-2-icon-1.png" crc="80043581" ref="index"/>
+    <file name="block-2-icon-2.png" crc="3981562227" ref="index"/>
+    <file name="block-2-icon-3.png" crc="68200112" ref="index"/>
+    <file name="form-image.png" crc="3862139519" ref="index"/>
+    <file name="block-3-image.png" crc="3775493177" ref="index"/>
+    <file name="block-3-icon-1.png" crc="4233523196" ref="index"/>
+    <file name="block-3-icon-2.png" crc="4082891491" ref="index"/>
+    <file name="block-4-theme-1.png" crc="4097081883" ref="index"/>
+    <file name="contacts-icon-1.png" crc="4235749462" ref="index"/>
+    <file name="contacts-icon-2.png" crc="3974114667" ref="index"/>
+    <file name="andriy_tovservis.jpg" crc="3995928457" seo="true" ref="index"/>
+    <file name="july_jurist.jpg" crc="357047051" seo="true" ref="index"/>
+    <file name="pavlo_student.jpg" crc="418596686" seo="true" ref="index"/>
+    <file name="yana_glavaosbb.jpg" crc="3959037446" seo="true" ref="index"/>
+    <file name="anastasia_glavaosbb.jpg" crc="3975592450" seo="true" ref="index"/>
+    <file name="vitaliy_pidpryemets.jpg" crc="4131094250" seo="true" ref="index"/>
+    <file name="yuriy_logistyka.jpg" crc="493162829" seo="true" ref="index"/>
+    <file name="untitled-1.png" crc="3815157822" seo="true" ref="index"/>
+    <file name="untitled-2.png" crc="3806773704" seo="true" ref="index"/>
+    <file name="untitled-4.png" crc="3864516244" seo="true" ref="index"/>
+    <file name="untitled-3.png" crc="96297774" seo="true" ref="index"/>
+    <file name="untitled-6.png" crc="132649320" seo="true" ref="index"/>
+    <file name="untitled-5.png" crc="4175338983" seo="true" ref="index"/>
+  </folder>
+  <file name="index.html" crc="268594441" seo="true" mt="1487238111462" redirect="true"/>
+</manifest>
