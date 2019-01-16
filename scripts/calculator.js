@@ -55,13 +55,14 @@ var Number_of_ice_cases = {
         'Lugansk': 1,
         'Crimea': 1
     }
-$('#calculator_width').on("keyup ", function(){ //показує плошу в вікні площі з введених даних
+$('#calculator_width').on("keyup ", function(){
     var val = parseInt($('#calculator_width').val()) * parseInt($('#calculator_length').val());
     if(val){
     $('#calculator_area').val(val+ ' м.кв');
     console.log(val);
     }
 });
+ //$('#calculator_area').val = ;
 
 $('.calculate').click(function () {
     // По ідеї тут тре забрати всю інфу з інпутів для обрахунікв, порахувати і потім
@@ -74,7 +75,7 @@ $('.calculate').click(function () {
 if(area){
 
 
-    console.log('input information', width, length, area, region, type);
+    console.log('some text here ', width, length, area, region, type);
 
 
     var quantity = $('.calculator_result_quantity'); // кількість сюда записувати
@@ -110,10 +111,12 @@ else{
 
 $('.order').click(function () {
     //тут перевіряємо чи є дані дані реєстрації перед натисненням "Замовит"
-    console.log('True');
+  
     // а тут просто забрати те що получилось в калкулейті і відпавити куда там тре
-    var quantity = $('.calculator_result_quantity').text();
-    var price = $('.calculator_result_price').text();
+    var t_quantity = $('.calculator_result_quantity').text();
+    var t_price = $('.calculator_result_price').text();
+    $('#u8634').click();
+	$('#buttonu9202').click();
 
 });
 
@@ -130,6 +133,41 @@ $('.radio_box').click(function () {
 })
 
 $('.order-form_button').click(function () {
+    var regExp = {
+        'name' : new RegExp('A-Za-zА-Яа-я]{2,50}'),
+
+    };
     // тут відправляти інфу по замовленні
-   console.log('Hello')
+    var user_region = $('#calculator_region option:checked').text(),
+        coverage_type = $('#calculator_type option:checked').text(),
+        t_quantity = parseInt($('.calculator_result_quantity').text()),
+        t_price = parseInt($('.calculator_result_price').text()),
+        user_name = $('#name').val(),
+        user_email = $('#email').val(),
+        user_phone = $('#phone').val(),
+        user_comment = $('#comment').val(),
+        user_organization = $('#organization').val(),
+        user_erdpo = $('#erdpo').val(),
+        user_delivery = $('input[name = delivery]:checked').val() == 1 ? 'Самовивіз' : $('#address').val()
+        ; 
+        
+            console.log(user_name);
+    
+    // $.post("/scripts/mail.php",{
+    //     user_name: user_name,
+    //     user_region: user_region, 
+    //     coverage_type: coverage_type,
+    //     user_email: user_email,
+    //     user_phone: user_phone,
+    //     user_comment: user_comment,
+    //     user_organization: user_organization,
+    //     user_erdpo: user_erdpo,
+    //     user_delivery: user_delivery,
+	// 	t_quantity:t_quantity,
+    //     t_price:t_price
+    // },function(data) {
+    //     alert('Ваше замовлення відправлене нашому оператору, він зв\'яжеться найближчим часом');
+    //     location.reload();
+    // });
+   
 });

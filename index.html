@@ -279,32 +279,32 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
           <p>і ми перетелефонуємо Вам</p>
          </div>
           <div class="order-form">
-              <div class="order-form_left">
+              <form class="order-form_left">
                   <div class="order-form_item">
                       <label for="name">Ім'я</label>
-                      <input type="text" id="name">
+                      <input type="text" id="name" name="imya" required placeholder="Ваше ім'я">
                   </div>
                   <div class="order-form_item">
                       <label for="email">E-mail</label>
-                      <input type="text" id="email">
+                      <input type="text" id="email" name="email" placeholder="test@gmail.com"  data-regexp="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$">
                   </div>
                   <div class="order-form_item">
                       <label for="phone">Телефон</label>
-                      <input type="text" id="phone">
+                      <input type="text" id="phone" name="phone" required pattern="[0-9]{8,12}">
                   </div>
                   <div class="order-form_item">
                       <label for="comment">Коментар</label>
-                      <input type="text" id="comment">
+                      <input type="text" id="comment" name="message">
                   </div>
-              </div>
+                </form>
               <div class="order-form_right">
                   <div class="order-form_item">
-                      <label for="organization">Назва організації</label>
+                      <label for="organization" pattern="[A-Za-zА-Яа-я]{2,250}" >Назва організації</label>
                       <input type="text" id="organization">
                   </div>
                   <div class="order-form_item">
                       <label for="erdpo">ЄРДЕПОУ</label>
-                      <input type="text" id="erdpo">
+                      <input type="text" id="erdpo" pattern="[0-9]{8}">
                   </div>
                   <div class="order-form_item">
                    <div class="radio_box">
@@ -735,10 +735,10 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
           <img class="block" id="u9576_img" src="images/untitled-5.png?crc=4175338983" alt="" width="300" height="300"/>
          </div>
          <div class="clip_frame grpelem" id="u9578"><!-- image -->
-          <img class="block" id="u9578_img" src="images/untitled-4.png?crc=3864516244" alt="" width="300" height="300"/>
+          <img class="block" id="u9578_img" src="images/untitled-8.png?crc=3864516244" alt="" width="300" height="300"/>
          </div>
          <div class="clip_frame grpelem" id="u9582"><!-- image -->
-          <img class="block" id="u9582_img" src="images/untitled-2.png?crc=3806773704" alt="" width="300" height="300"/>
+          <img class="block" id="u9582_img" src="images/untitled-7.png?crc=3806773704" alt="" width="300" height="300"/>
          </div>
         </div>
        </div>
