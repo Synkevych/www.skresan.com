@@ -1,3 +1,34 @@
+$('.order-form_item input[type=email]').on('blur', function () {
+    let email = $(this).val();
+    if (email.length > 0
+    && (email.match(/.+?\@.+/g) || []).length !== 1) {
+        alert('Адреса електронної пошти введено невірно!')
+    } else {
+     // console.log('valid');
+    }
+  });
+
+  $('.order-form_item input[type=tel]').on('blur', function () {
+    let tel = $(this).val();
+    if (tel.length > 0
+    && (tel.match(/^[+]{0,1}[0-9]{10,13}/) || []).length !== 1) {
+        alert('Номер телефону введено неправильно!')
+    } else {
+     // console.log('valid');
+    }
+  }); 
+
+  $('.order-form_item input[type=number]').on('blur', function () {
+    let number = $(this).val();
+    if (number.length > 0
+    && (number.match(/[0-9]{8}/) || []).length !== 1) {
+      alert('Код ЄДРПОУ введено неправильно, він складається з 8 цифр.')
+    } else {
+      //console.log('valid');
+    }
+  }); 
+ 
+
 var Number_of_ice_cases = {
     'Crimea': 13.1,
     'Vinnitsa': 12.1,
@@ -58,11 +89,15 @@ var Number_of_ice_cases = {
 $('#calculator_width').on("keyup ", function(){
     var val = parseInt($('#calculator_width').val()) * parseInt($('#calculator_length').val());
     if(val){
-    $('#calculator_area').val(val+ ' м.кв');
-    console.log(val);
+    	$('#calculator_area').val(val+ ' м.кв');
     }
 });
- //$('#calculator_area').val = ;
+$('#calculator_length').on("keyup ", function(){
+    var val = parseInt($('#calculator_length').val()) * parseInt($('#calculator_width').val());
+    if(val){
+    	$('#calculator_area').val(val+ ' м.кв');
+    }
+});
 
 $('.calculate').click(function () {
     // По ідеї тут тре забрати всю інфу з інпутів для обрахунікв, порахувати і потім
@@ -73,14 +108,8 @@ $('.calculate').click(function () {
     var region = $('#calculator_region').val(); // регіон
     var type = $('#calculator_type').val(); //тип покриття
 if(area){
-
-
-    console.log('some text here ', width, length, area, region, type);
-
-
     var quantity = $('.calculator_result_quantity'); // кількість сюда записувати
     var price = $('.calculator_result_price'); // ціну сюда
-
 
     // quantity 
     var qn = Math.ceil((Math.round(Number_of_ice_cases[region] * parseInt(area) * 0.1) / 2) / 25);
@@ -133,14 +162,27 @@ $('.radio_box').click(function () {
 })
 
 $('.order-form_button').click(function () {
-    var regExp = {
-        'name' : new RegExp('A-Za-zА-Яа-я]{2,50}'),
-
-    };
     // тут відправляти інфу по замовленні
-    var user_region = $('#calculator_region option:checked').text(),
+	let email = $('.order-form_item input[type=email]').val(),
+    tel = $('.order-form_item input[type=tel]').val(),
+    num = $('.order-form_item input[type=number]').val(),
+	name = $('.order-form_item input[name=imya]').val() ;
+	
+	if ((name == undefined) || (name.length < 1 )) {
+        alert('Ввеедіть будь-ласка ваше ім\'я!');
+    }
+    else if (email.length > 0 && (email.match(/.+?\@.+/g) || []).length !== 1) {
+        alert('Адреса електронної пошти введено невірно!');
+    }
+    else if (tel.length > 0 && (tel.match(/^[+]{0,1}[0-9]{10,13}/) || []).length !== 1){
+        alert('Номер телефону введено неправильно!')   
+        }
+    else{
+        var user_region = $('#calculator_region option:checked').text(),
         coverage_type = $('#calculator_type option:checked').text(),
-        t_quantity = parseInt($('.calculator_result_quantity').text()),
+		t_width = $('#calculator_width').val(),
+		t_length = $('#calculator_length').val(),
+     	t_quantity = parseInt($('.calculator_result_quantity').text()),
         t_price = parseInt($('.calculator_result_price').text()),
         user_name = $('#name').val(),
         user_email = $('#email').val(),
@@ -149,25 +191,31 @@ $('.order-form_button').click(function () {
         user_organization = $('#organization').val(),
         user_erdpo = $('#erdpo').val(),
         user_delivery = $('input[name = delivery]:checked').val() == 1 ? 'Самовивіз' : $('#address').val()
-        ; 
-        
-            console.log(user_name);
-    
-    // $.post("/scripts/mail.php",{
-    //     user_name: user_name,
-    //     user_region: user_region, 
-    //     coverage_type: coverage_type,
-    //     user_email: user_email,
-    //     user_phone: user_phone,
-    //     user_comment: user_comment,
-    //     user_organization: user_organization,
-    //     user_erdpo: user_erdpo,
-    //     user_delivery: user_delivery,
-	// 	t_quantity:t_quantity,
-    //     t_price:t_price
-    // },function(data) {
-    //     alert('Ваше замовлення відправлене нашому оператору, він зв\'яжеться найближчим часом');
-    //     location.reload();
-    // });
-   
+        ;
+    $.post("/scripts/mail.php",{
+        user_name: user_name,
+        user_region: user_region, 
+        coverage_type: coverage_type,
+        user_email: user_email,
+        user_phone: user_phone,
+        user_comment: user_comment,
+        user_organization: user_organization,
+        user_erdpo: user_erdpo,
+        user_delivery: user_delivery,
+		t_quantity:t_quantity,
+        t_price:t_price,
+		t_width: t_width,
+		t_length: t_length
+    },function(data) {
+		alert('Ваше замовлення відправлене нашому оператору, він зв\'яжеться з Вами найближчим часом.');
+        location.reload();
+    });
+	}
+});
+let clear_calc_form = $('#u8634').click(function(){
+   // $('#calculator_width').set('value',"");
+    $('#calculator_width').val('');
+    $('#calculator_length').val('');
+    $('#calculator_area').val('');
+    $('#u8617').click();
 });

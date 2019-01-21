@@ -1,3 +1,17 @@
+/*
+
+ @fileOverview TouchSwipe - jQuery Plugin
+ @version 1.6.6
+
+ @author Matt Bryson http://www.github.com/mattbryson
+ @see https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
+ @see http://labs.skinkers.com/touchSwipe/
+ @see http://plugins.jquery.com/project/touchSwipe
+
+ Copyright (c) 2010 Matt Bryson
+ Dual licensed under the MIT or GPL Version 2 licenses.
+
+*/
 (function(a){typeof define==="function"&&define.amd&&define.amd.jQuery?define(["jquery"],a):a(jQuery)})(function(a){function b(f){if(f&&f.allowPageScroll===void 0&&(f.swipe!==void 0||f.swipeStatus!==void 0))f.allowPageScroll=k;if(f.click!==void 0&&f.tap===void 0)f.tap=f.click;f||(f={});f=a.extend({},a.fn.swipe.defaults,f);return this.each(function(){var b=a(this),d=b.data(Q);d||(d=new c(this,f),b.data(Q,d))})}function c(c,b){function ha(f){if(v.data(Q+"_intouch")!==!0&&!(a(f.target).closest(b.excludedElements,
 v).length>0)){var c=f.originalEvent?f.originalEvent:f,d,g=r?c.touches[0]:c;A=w;r?B=c.touches.length:f.preventDefault();F=0;K=G=null;M=N=E=0;I=1;L=0;x=Ba();Y=Ca();Z=U=0;if(!r||B===b.fingers||b.fingers===y||V()){if(ia(0,g),aa=O(),B==2&&(ia(1,c.touches[1]),N=M=ja(x[0].start,x[1].start)),b.swipeStatus||b.pinchStatus)d=J(c,A)}else d=!1;if(d===!1)return A=z,J(c,A),d;else b.hold&&(ka=setTimeout(a.proxy(function(){v.trigger("hold",[c.target]);b.hold&&(d=b.hold.call(v,c,c.target))},this),b.longTapThreshold)),
 ba(!0);return null}}function la(c){var o=c.originalEvent?c.originalEvent:c;if(!(A===D||A===z||ta())){var q,p=ua(r?o.touches[0]:o);W=O();if(r)B=o.touches.length;b.hold&&clearTimeout(ka);A=s;B==2&&(N==0?(ia(1,o.touches[1]),N=M=ja(x[0].start,x[1].start)):(ua(o.touches[1]),M=ja(x[0].end,x[1].end),K=I<1?j:h),I=(M/N*1).toFixed(2),L=Math.abs(N-M));if(B===b.fingers||b.fingers===y||!r||V()){var n;n=p.start;var m=p.end;n=Math.round(Math.atan2(m.y-n.y,n.x-m.x)*180/Math.PI);n<0&&(n=360-Math.abs(n));n=G=n<=45&&
